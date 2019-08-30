@@ -65,10 +65,16 @@
                 } else {
                     var srcImgURL_M     = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolder+'/';
                 };
-            // Paramètre "sizehw" : à déclarer en pixels - 80 maxi
-                var srcImgHeight_M      = (is_numeric('#sizeh-M#')) ? parseFloat('#sizeh-M#') : 40;
-                var srcImgWidth_M       = (is_numeric('#sizew-M#')) ? parseFloat('#sizew-M#') : 40;
-                var srcImgSize_M        = 'height='+srcImgHeight+'px width='+srcImgWidth+'px';
+            // Paramètre "sizeh" & "sizew"
+                var srcImgHeight_M	   = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
+                var srcImgWidth_M 	   = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
+                // Type de taille
+                    var srcImgpourcent_M    = ('#Pourcentage-M#'!='#'+'Pourcentage-M#') ? "#Pourcentage-M#" : "NO";
+                    if (srcImgpourcent_M  == "NO") {
+                        var srcImgSize_M    = 'height='+srcImgHeight_M+'px width='+srcImgWidth_M+'px';
+                    } else {
+                        var srcImgSize_M    = 'height='+srcImgHeight_M+'% width='+srcImgWidth_M+'%';
+                    }
             // Paramètrage du logo pour Erreur
                 var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "oups";
                 var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
