@@ -23,51 +23,54 @@
     <script>
         jeedom.cmd.update['#id#'] = function(_options){
          // Valeur par mode
-                var mode0               = ('#mode0#' !='#'+'mode0#') ? "#mode0#":"Mode0";
-                var mode1               = ('#mode1#' !='#'+'mode1#') ? "#mode1#":"Mode1";
-                var mode2               = ('#mode2#' !='#'+'mode2#') ? "#mode2#":"Mode2";
-                var mode3               = ('#mode3#' !='#'+'mode3#') ? "#mode3#":"Mode3";
-                var mode4               = ('#mode4#' !='#'+'mode4#') ? "#mode4#":"Mode4";
-                var mode5               = ('#mode5#' !='#'+'mode5#') ? "#mode5#":"Mode5";
-                var mode6               = ('#mode6#' !='#'+'mode6#') ? "#mode6#":"Mode6";
-                var mode7               = ('#mode7#' !='#'+'mode7#') ? "#mode7#":"Mode7";
-                var mode8               = ('#mode8#' !='#'+'mode8#') ? "#mode8#":"Mode8";
-                var mode9               = ('#mode9#' !='#'+'mode9#') ? "#mode9#":"Mode9";
-                var mode10              = ('#mode10#' !='#'+'mode10#') ? "#mode10#":"Mode10";         
+                var mode0                   = ('#mode0#' !='#'+'mode0#') ? "#mode0#":"Mode0";
+                var mode1                   = ('#mode1#' !='#'+'mode1#') ? "#mode1#":"Mode1";
+                var mode2                   = ('#mode2#' !='#'+'mode2#') ? "#mode2#":"Mode2";
+                var mode3                   = ('#mode3#' !='#'+'mode3#') ? "#mode3#":"Mode3";
+                var mode4                   = ('#mode4#' !='#'+'mode4#') ? "#mode4#":"Mode4";
+                var mode5                   = ('#mode5#' !='#'+'mode5#') ? "#mode5#":"Mode5";
+                var mode6                   = ('#mode6#' !='#'+'mode6#') ? "#mode6#":"Mode6";
+                var mode7                   = ('#mode7#' !='#'+'mode7#') ? "#mode7#":"Mode7";
+                var mode8                   = ('#mode8#' !='#'+'mode8#') ? "#mode8#":"Mode8";
+                var mode9                   = ('#mode9#' !='#'+'mode9#') ? "#mode9#":"Mode9";
+                var mode10                  = ('#mode10#' !='#'+'mode10#') ? "#mode10#":"Mode10";         
           // Image par mode
-                var srcImglogoM0        = ('#logo0#' !='#'+'logo0#') ? "#logo0#":mode0;
-                var srcImglogoM0_T      = ('#logo0_type#'!='#'+'logo0_type#') ? "#logo0_type#" : "png";
-                var srcImglogoM1        = ('#logo1#' !='#'+'logo1#') ? "#logo1#":mode1;
-                var srcImglogoM1_T      = ('#logo1_type#'!='#'+'logo1_type#') ? "#logo1_type#" : "png";
-                var srcImglogoM2        = ('#logo2#' !='#'+'logo2#') ? "#logo2#":mode2;
-                var srcImglogoM2_T      = ('#logo2_type#'!='#'+'logo2_type#') ? "#logo2_type#" : "png";
-                var srcImglogoM3        = ('#logo3#' !='#'+'logo3#') ? "#logo3#":mode3;
-                var srcImglogoM3_T      = ('#logo3_type#'!='#'+'logo3_type#') ? "#logo3_type#" : "png";
-                var srcImglogoM4        = ('#logo4#' !='#'+'logo4#') ? "#logo4#":mode4;
-                var srcImglogoM4_T      = ('#logo4_type#'!='#'+'logo4_type#') ? "#logo4_type#" : "png";
-                var srcImglogoM5        = ('#logo5#' !='#'+'logo5#') ? "#logo5#":mode5;
-                var srcImglogoM5_T      = ('#logo5_type#'!='#'+'logo5_type#') ? "#logo5_type#" : "png";
-                var srcImglogoM6        = ('#logo6#' !='#'+'logo6#') ? "#logo6#":mode6;
-                var srcImglogoM6_T      = ('#logo6_type#'!='#'+'logo6_type#') ? "#logo6_type#" : "png";
-                var srcImglogoM7        = ('#logo7#' !='#'+'logo7#') ? "#logo7#":mode7;
-                var srcImglogoM7_T      = ('#logo7_type#'!='#'+'logo7_type#') ? "#logo7_type#" : "png";
-                var srcImglogoM8        = ('#logo8#' !='#'+'logo8#') ? "#logo8#":mode8;
-                var srcImglogoM8_T      = ('#logo8_type#'!='#'+'logo8_type#') ? "#logo8_type#" : "png";
-                var srcImglogoM9        = ('#logo9#' !='#'+'logo9#') ? "#logo9#":mode9;
-                var srcImglogoM9_T      = ('#logo9_type#'!='#'+'logo9_type#') ? "#logo9_type#" : "png";
-                var srcImglogoM10       = ('#logo10#' !='#'+'logo10#') ? "#logo10#":mode10;
-                var srcImglogoM10_T     = ('#logo10_type#'!='#'+'logo10_type#') ? "#logo10_type#" : "png";    
+                var srcImglogoM0            = ('#logo0#' !='#'+'logo0#') ? "#logo0#":mode0;
+                var srcImglogoM0_T          = ('#logo0_type#'!='#'+'logo0_type#') ? "#logo0_type#" : "png";
+                var srcImglogoM1            = ('#logo1#' !='#'+'logo1#') ? "#logo1#":mode1;
+                var srcImglogoM1_T          = ('#logo1_type#'!='#'+'logo1_type#') ? "#logo1_type#" : "png";
+                var srcImglogoM2            = ('#logo2#' !='#'+'logo2#') ? "#logo2#":mode2;
+                var srcImglogoM2_T          = ('#logo2_type#'!='#'+'logo2_type#') ? "#logo2_type#" : "png";
+                var srcImglogoM3            = ('#logo3#' !='#'+'logo3#') ? "#logo3#":mode3;
+                var srcImglogoM3_T          = ('#logo3_type#'!='#'+'logo3_type#') ? "#logo3_type#" : "png";
+                var srcImglogoM4            = ('#logo4#' !='#'+'logo4#') ? "#logo4#":mode4;
+                var srcImglogoM4_T          = ('#logo4_type#'!='#'+'logo4_type#') ? "#logo4_type#" : "png";
+                var srcImglogoM5            = ('#logo5#' !='#'+'logo5#') ? "#logo5#":mode5;
+                var srcImglogoM5_T          = ('#logo5_type#'!='#'+'logo5_type#') ? "#logo5_type#" : "png";
+                var srcImglogoM6            = ('#logo6#' !='#'+'logo6#') ? "#logo6#":mode6;
+                var srcImglogoM6_T          = ('#logo6_type#'!='#'+'logo6_type#') ? "#logo6_type#" : "png";
+                var srcImglogoM7            = ('#logo7#' !='#'+'logo7#') ? "#logo7#":mode7;
+                var srcImglogoM7_T          = ('#logo7_type#'!='#'+'logo7_type#') ? "#logo7_type#" : "png";
+                var srcImglogoM8            = ('#logo8#' !='#'+'logo8#') ? "#logo8#":mode8;
+                var srcImglogoM8_T          = ('#logo8_type#'!='#'+'logo8_type#') ? "#logo8_type#" : "png";
+                var srcImglogoM9            = ('#logo9#' !='#'+'logo9#') ? "#logo9#":mode9;
+                var srcImglogoM9_T          = ('#logo9_type#'!='#'+'logo9_type#') ? "#logo9_type#" : "png";
+                var srcImglogoM10           = ('#logo10#' !='#'+'logo10#') ? "#logo10#":mode10;
+                var srcImglogoM10_T         = ('#logo10_type#'!='#'+'logo10_type#') ? "#logo10_type#" : "png";    
             
         // Paramétrage des images
-                var srcFolder           = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
+                var srcFolder               = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
+                var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "Erreur_danger";
+                var srcImgURLError_M        = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolderErreur+'/';
+                
                 if (srcFolder == 'NULL') {
-                    var srcImgURL_M     = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/";
+                    var srcImgURL_M         = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/";
                 } else {
-                    var srcImgURL_M     = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolder+'/';
+                    var srcImgURL_M         = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolder+'/';
                 };
             // Paramètre "sizeh" & "sizew"
-                var srcImgHeight_M	   = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
-                var srcImgWidth_M 	   = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
+                    var srcImgHeight_M      = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
+                    var srcImgWidth_M       = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
                 // Type de taille
                     var srcImgpourcent_M    = ('#Pourcentage-M#'!='#'+'Pourcentage-M#') ? "#Pourcentage-M#" : "NO";
                     if (srcImgpourcent_M  == "NO") {
@@ -76,8 +79,8 @@
                         var srcImgSize_M    = 'height='+srcImgHeight_M+'% width='+srcImgWidth_M+'%';
                     }
             // Paramètrage du logo pour Erreur
-                var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "oups";
-                var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
+                var srcImglogoER            = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "oups";
+                var srcImglogoER_T          = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
             // Variable pour Update
                 var srcPictureID;
           		var srcPictureID_T;
@@ -119,6 +122,7 @@
             } else {
                 srcPictureID	= srcImglogoER;
                 srcPictureID_T	= srcImglogoER_T;
+                srcImgURL_M     = srcImgURLError_M;
             }
           
         $('.cmd[data-cmd_uid=#uid#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcPictureID +'.'+ srcPictureID_T+'" '+srcImgSize_M+'>');
