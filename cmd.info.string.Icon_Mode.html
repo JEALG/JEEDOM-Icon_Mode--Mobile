@@ -3,7 +3,7 @@
     <!-- Info Widget
         Basé sur les widget de 	: 
         Mise à jour             : JAG 20190921 : Mise à jour suite modif plugin "Mode"
-		Info					: Merci à @Salvialf pour la duréee, @Nicoraptor pour le code pour récupérer valeur Mode, @Antoinekl1 pour l'info et le code suite à la modif du plugin "Mode"
+		Info					: JAG 20190907 : Normalisation nom images => Merci à mich0111
 	-->
     <div class="title #hide_name#">
         <div class="cmdName" style="#hideCmdName#">#name_display#</div>
@@ -60,8 +60,7 @@
             
         // Paramétrage des images
                 var srcFolder               = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
-                var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "Erreur_danger";
-                var srcImgURLError_M        = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolderErreur+'/';
+                var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "er_oups1";
                 
                 if (srcFolder == 'NULL') {
                     var srcImgURL_M         = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/";
@@ -78,9 +77,13 @@
                     } else if (srcImgpourcent_M  == "YES") {
                         var srcImgSize_M    = 'height='+srcImgHeight_M+'% width='+srcImgWidth_M+'%';
                     }
+
             // Paramètrage du logo pour Erreur
-                var srcImglogoER            = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "oups";
-                var srcImglogoER_T          = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
+                var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups1";
+                var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
+                var srcFolderErreur     = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
+                var srcImgURLError_M    = "plugins/widget/core/template/mobile/cmd.info.string.Icon_Mode/"+srcFolderErreur+'/';
+
             // Variable pour Update
                 var srcPictureID;
           		var srcPictureID_T;
