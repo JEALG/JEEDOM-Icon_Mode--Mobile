@@ -2,8 +2,7 @@
 <div style="padding:0;min-width:90px;min-height:100px;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
     <!-- Info Widget
         Basé sur les widget de 	: 
-        Mise à jour             : JAG 20190921 : Mise à jour suite modif plugin "Mode"
-		Info					: JAG 20190907 : Normalisation nom images => Merci à mich0111
+        Mise à jour             : JAG 20190918 : Migration uniquement pour core V4
 	-->
     <div class="title #hide_name#">
         <div class="cmdName" style="#hideCmdName#">#name_display#</div>
@@ -63,9 +62,9 @@
                 var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "er_oups1";
                 
                 if (srcFolder == 'NULL') {
-                    var srcImgURL_M         = "plugins/widget/core/template/dashboard/cmd.action.other.Multi-action-Defaut/";
+                    var srcImgURL_M         = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
                 } else {
-                    var srcImgURL_M         = "plugins/widget/core/template/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
+                    var srcImgURL_M         = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
                 };
             // Paramètre "sizeh" & "sizew"
                     var srcImgHeight_M      = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
@@ -82,7 +81,7 @@
                 var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups6_or";
                 var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
                 var srcFolderErreur     = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
-                var srcImgURLError_M    = "plugins/widget/core/template/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderErreur+'/';
+                var srcImgURLError_M    = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderErreur+'/';
 
             // Variable pour Update
                 var srcPictureID;
