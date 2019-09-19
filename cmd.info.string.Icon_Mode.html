@@ -62,9 +62,9 @@
                 var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "er_oups1";
                 
                 if (srcFolder == 'NULL') {
-                    var srcImgURL_M         = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
+                    var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
                 } else {
-                    var srcImgURL_M         = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
+                    var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
                 };
             // Paramètre "sizeh" & "sizew"
                     var srcImgHeight_M      = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
@@ -80,8 +80,8 @@
             // Paramètrage du logo pour Erreur
                 var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups6_or";
                 var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
-                var srcFolderErreur     = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
-                var srcImgURLError_M    = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderErreur+'/';
+                var srcFolderER         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
+                var srcImgURL_ER        = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderER+'/';
 
             // Variable pour Update
                 var srcPictureID;
@@ -124,10 +124,10 @@
             } else {
                 srcPictureID	= srcImglogoER;
                 srcPictureID_T	= srcImglogoER_T;
-                srcImgURL_M     = srcImgURLError_M;
+                srcImgURL       = srcImgURL_ER;
             }
           
-        $('.cmd[data-cmd_uid=#uid#] .iconCmd#id#').empty().append('<img src="'+srcImgURL_M +srcPictureID +'.'+ srcPictureID_T+'" '+srcImgSize_M+'>');
+        $('.cmd[data-cmd_uid=#uid#] .iconCmd#id#').empty().append('<img src="'+srcImgURL +srcPictureID +'.'+ srcPictureID_T+'" '+srcImgSize_M+'>');
         $('.cmd[data-cmd_uid=#uid#] .value#id#').empty().append(_options.display_value+' '+'#unite#');
         $('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectée le '+_options.collectDate);
           
