@@ -1,8 +1,6 @@
-<div style="width:40px;height:100%;vertical-align: top;" class="cmd #history#" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#">
-<div style="padding:0;min-width:90px;min-height:100px;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
-    <!-- Info Widget
+<div style="width:90p;height:100%;vertical-align: top;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
         Basé sur les widget de 	: 
-        Mise à jour             : JAG 20190921 : Mise à jour suite modif plugin "Mode"
+        Mise à jour             : JAG 20191005 : Correction Bug présentation
 		Info					: JAG 20190907 : Normalisation nom images => Merci à mich0111
 	-->
     <div class="title #hide_name#">
@@ -60,7 +58,6 @@
             
         // Paramétrage des images
                 var srcFolder               = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
-                var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "er_oups1";
                 
                 if (srcFolder == 'NULL') {
                     var srcImgURL_M         = "plugins/widget/core/template/dashboard/cmd.action.other.Multi-action-Defaut/";
