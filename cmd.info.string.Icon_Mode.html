@@ -1,24 +1,18 @@
-<div style="width:40px;height:100%;vertical-align: top;" class="cmd #history#" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-version="#version#" data-eqLogic_id="#eqLogic_id#">
-<div style="padding:0;min-width:90px;min-height:100px;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
+<div style="width:90p;height:100%;vertical-align: top;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
     <!-- Info Widget
         Basé sur les widget de 	: 
-        Mise à jour             : JAG 20190918 : Migration uniquement pour core V4
+        Mise à jour             : JAG 20191005 : Correction Bug présentation
 	-->
-    <div class="title #hide_name#">
-        <div class="cmdName" style="#hideCmdName#">#name_display#</div>
-    </div>
-        <div class="content-sm ">
-            <span class="iconCmd#id#"></span>
-    </div>
-    <!-- Historique -->
+    <center>
+        <div class="cmdName #hide_name#">#name_display#</div>
+        <div class="iconCmd#id#"></div>
         <div class="cmdStats #hide_history#" style="#displayHistory# font-size : 10px;">
             <span title="Min" class="tooltips">#minHistoryValue##unite#</span>|<span title="Moy" class="tooltips">#averageHistoryValue##unite#</span>|<span title="Max" class="tooltips">#maxHistoryValue##unite#</span> <i class="#tendance#"></i>
         </div>
-    <!-- Durée -->
         <div style="font-weight: bold;font-size : 10px;">
-            <span class="timeCmd#id#" ></span>
+            <span class="timeCmd#id# timeCmd" ></span>
         </div>
-
+    </center>    
     <script>
         jeedom.cmd.update['#id#'] = function(_options){
          // Valeur par mode
@@ -59,7 +53,6 @@
             
         // Paramétrage des images
                 var srcFolder               = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
-                var srcFolderErreur         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "er_oups1";
                 
                 if (srcFolder == 'NULL') {
                     var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
@@ -67,8 +60,8 @@
                     var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
                 };
             // Paramètre "sizeh" & "sizew"
-                    var srcImgHeight_M      = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
-                    var srcImgWidth_M       = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
+                var srcImgHeight_M          = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
+                var srcImgWidth_M           = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
                 // Type de taille
                     var srcImgpourcent_M    = ('#Pourcentage-M#'!='#'+'Pourcentage-M#') ? "#Pourcentage-M#" : "NO";
                     if (srcImgpourcent_M  == "NO") {
@@ -78,10 +71,10 @@
                     }
 
             // Paramètrage du logo pour Erreur
-                var srcImglogoER        = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups6_or";
-                var srcImglogoER_T      = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
-                var srcFolderER         = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
-                var srcImgURL_ER        = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderER+'/';
+                var srcImglogoER            = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups6_or";
+                var srcImglogoER_T          = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
+                var srcFolderER             = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
+                var srcImgURL_ER            = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderER+'/';
 
             // Variable pour Update
                 var srcPictureID;
