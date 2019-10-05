@@ -1,23 +1,18 @@
-<div style="width:90p;height:100%;vertical-align: top;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
+<div style="width:90px;height:100%;vertical-align: top;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
+    <!-- Info Widget
         Basé sur les widget de 	: 
         Mise à jour             : JAG 20191005 : Correction Bug présentation
-		Info					: JAG 20190907 : Normalisation nom images => Merci à mich0111
 	-->
-    <div class="title #hide_name#">
-        <div class="cmdName" style="#hideCmdName#">#name_display#</div>
-    </div>
-        <div class="content-sm ">
-            <span class="iconCmd#id#"></span>
-    </div>
-    <!-- Historique -->
+    <center>
+        <div class="cmdName #hide_name#">#name_display#</div>
+        <div class="iconCmd#id#"></div>
         <div class="cmdStats #hide_history#" style="#displayHistory# font-size : 10px;">
             <span title="Min" class="tooltips">#minHistoryValue##unite#</span>|<span title="Moy" class="tooltips">#averageHistoryValue##unite#</span>|<span title="Max" class="tooltips">#maxHistoryValue##unite#</span> <i class="#tendance#"></i>
         </div>
-    <!-- Durée -->
         <div style="font-weight: bold;font-size : 10px;">
-            <span class="timeCmd#id#" ></span>
+            <span class="timeCmd#id# timeCmd" ></span>
         </div>
-
+    </center>
     <script>
         jeedom.cmd.update['#id#'] = function(_options){
          // Valeur par mode
