@@ -1,146 +1,153 @@
 <div style="width:90px;height:100%;vertical-align: top;" class="cmd #history# tooltips cmd-widget #displayHistory#" data-type="info" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#" data-eqLogic_id="#eqLogic_id#" data-eqLogic_id="#eqLogic_id#" title="#collectDate#">
     <!-- Info Widget
-        Basé sur les widget de 	: 
-        Mise à jour             : JAG 20191005 : Correction Bug présentation
+        Widget de           : JAG
+        Widget pour le Core : V4
+        Mise à jour         : JAG 20200502 => Ajout Version Core
 	-->
     <center>
         <div class="cmdName #hide_name#">#name_display#</div>
         <div class="iconCmd#id#"></div>
         <div class="cmdStats #hide_history#" style="#displayHistory# font-size : 10px;">
-            <span title="Min" class="tooltips">#minHistoryValue##unite#</span>|<span title="Moy" class="tooltips">#averageHistoryValue##unite#</span>|<span title="Max" class="tooltips">#maxHistoryValue##unite#</span> <i class="#tendance#"></i>
+
         </div>
         <div style="font-weight: bold;font-size : 10px;">
-            <span class="timeCmd#id# timeCmd" ></span>
+            <span class="timeCmd#id# timeCmd"></span>
         </div>
     </center>
     <script>
-        jeedom.cmd.update['#id#'] = function(_options){
-         // Valeur par mode
-                var mode0                   = ('#mode0#' !='#'+'mode0#') ? "#mode0#":"Mode0";
-                var mode1                   = ('#mode1#' !='#'+'mode1#') ? "#mode1#":"Mode1";
-                var mode2                   = ('#mode2#' !='#'+'mode2#') ? "#mode2#":"Mode2";
-                var mode3                   = ('#mode3#' !='#'+'mode3#') ? "#mode3#":"Mode3";
-                var mode4                   = ('#mode4#' !='#'+'mode4#') ? "#mode4#":"Mode4";
-                var mode5                   = ('#mode5#' !='#'+'mode5#') ? "#mode5#":"Mode5";
-                var mode6                   = ('#mode6#' !='#'+'mode6#') ? "#mode6#":"Mode6";
-                var mode7                   = ('#mode7#' !='#'+'mode7#') ? "#mode7#":"Mode7";
-                var mode8                   = ('#mode8#' !='#'+'mode8#') ? "#mode8#":"Mode8";
-                var mode9                   = ('#mode9#' !='#'+'mode9#') ? "#mode9#":"Mode9";
-                var mode10                  = ('#mode10#' !='#'+'mode10#') ? "#mode10#":"Mode10";         
-          // Image par mode
-                var srcImglogoM0            = ('#logo0#' !='#'+'logo0#') ? "#logo0#":mode0;
-                var srcImglogoM0_T          = ('#logo0_type#'!='#'+'logo0_type#') ? "#logo0_type#" : "png";
-                var srcImglogoM1            = ('#logo1#' !='#'+'logo1#') ? "#logo1#":mode1;
-                var srcImglogoM1_T          = ('#logo1_type#'!='#'+'logo1_type#') ? "#logo1_type#" : "png";
-                var srcImglogoM2            = ('#logo2#' !='#'+'logo2#') ? "#logo2#":mode2;
-                var srcImglogoM2_T          = ('#logo2_type#'!='#'+'logo2_type#') ? "#logo2_type#" : "png";
-                var srcImglogoM3            = ('#logo3#' !='#'+'logo3#') ? "#logo3#":mode3;
-                var srcImglogoM3_T          = ('#logo3_type#'!='#'+'logo3_type#') ? "#logo3_type#" : "png";
-                var srcImglogoM4            = ('#logo4#' !='#'+'logo4#') ? "#logo4#":mode4;
-                var srcImglogoM4_T          = ('#logo4_type#'!='#'+'logo4_type#') ? "#logo4_type#" : "png";
-                var srcImglogoM5            = ('#logo5#' !='#'+'logo5#') ? "#logo5#":mode5;
-                var srcImglogoM5_T          = ('#logo5_type#'!='#'+'logo5_type#') ? "#logo5_type#" : "png";
-                var srcImglogoM6            = ('#logo6#' !='#'+'logo6#') ? "#logo6#":mode6;
-                var srcImglogoM6_T          = ('#logo6_type#'!='#'+'logo6_type#') ? "#logo6_type#" : "png";
-                var srcImglogoM7            = ('#logo7#' !='#'+'logo7#') ? "#logo7#":mode7;
-                var srcImglogoM7_T          = ('#logo7_type#'!='#'+'logo7_type#') ? "#logo7_type#" : "png";
-                var srcImglogoM8            = ('#logo8#' !='#'+'logo8#') ? "#logo8#":mode8;
-                var srcImglogoM8_T          = ('#logo8_type#'!='#'+'logo8_type#') ? "#logo8_type#" : "png";
-                var srcImglogoM9            = ('#logo9#' !='#'+'logo9#') ? "#logo9#":mode9;
-                var srcImglogoM9_T          = ('#logo9_type#'!='#'+'logo9_type#') ? "#logo9_type#" : "png";
-                var srcImglogoM10           = ('#logo10#' !='#'+'logo10#') ? "#logo10#":mode10;
-                var srcImglogoM10_T         = ('#logo10_type#'!='#'+'logo10_type#') ? "#logo10_type#" : "png";    
-            
-        // Paramétrage des images
-                var srcFolder               = ('#dossier#'!='#'+'dossier#') ? "#dossier#" : "NULL";
-                
-                if (srcFolder == 'NULL') {
-                    var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
-                } else {
-                    var srcImgURL           = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolder+'/';
-                };
+        jeedom.cmd.update['#id#'] = function(_options) {
+            // Valeur par mode
+            var mode0 = ('#mode0#' != '#' + 'mode0#') ? "#mode0#" : "Mode0";
+            var mode1 = ('#mode1#' != '#' + 'mode1#') ? "#mode1#" : "Mode1";
+            var mode2 = ('#mode2#' != '#' + 'mode2#') ? "#mode2#" : "Mode2";
+            var mode3 = ('#mode3#' != '#' + 'mode3#') ? "#mode3#" : "Mode3";
+            var mode4 = ('#mode4#' != '#' + 'mode4#') ? "#mode4#" : "Mode4";
+            var mode5 = ('#mode5#' != '#' + 'mode5#') ? "#mode5#" : "Mode5";
+            var mode6 = ('#mode6#' != '#' + 'mode6#') ? "#mode6#" : "Mode6";
+            var mode7 = ('#mode7#' != '#' + 'mode7#') ? "#mode7#" : "Mode7";
+            var mode8 = ('#mode8#' != '#' + 'mode8#') ? "#mode8#" : "Mode8";
+            var mode9 = ('#mode9#' != '#' + 'mode9#') ? "#mode9#" : "Mode9";
+            var mode10 = ('#mode10#' != '#' + 'mode10#') ? "#mode10#" : "Mode10";
+            // Image par mode
+            var srcImglogoM0 = ('#logo0#' != '#' + 'logo0#') ? "#logo0#" : mode0;
+            var srcImglogoM0_T = ('#logo0_type#' != '#' + 'logo0_type#') ? "#logo0_type#" : "png";
+            var srcImglogoM1 = ('#logo1#' != '#' + 'logo1#') ? "#logo1#" : mode1;
+            var srcImglogoM1_T = ('#logo1_type#' != '#' + 'logo1_type#') ? "#logo1_type#" : "png";
+            var srcImglogoM2 = ('#logo2#' != '#' + 'logo2#') ? "#logo2#" : mode2;
+            var srcImglogoM2_T = ('#logo2_type#' != '#' + 'logo2_type#') ? "#logo2_type#" : "png";
+            var srcImglogoM3 = ('#logo3#' != '#' + 'logo3#') ? "#logo3#" : mode3;
+            var srcImglogoM3_T = ('#logo3_type#' != '#' + 'logo3_type#') ? "#logo3_type#" : "png";
+            var srcImglogoM4 = ('#logo4#' != '#' + 'logo4#') ? "#logo4#" : mode4;
+            var srcImglogoM4_T = ('#logo4_type#' != '#' + 'logo4_type#') ? "#logo4_type#" : "png";
+            var srcImglogoM5 = ('#logo5#' != '#' + 'logo5#') ? "#logo5#" : mode5;
+            var srcImglogoM5_T = ('#logo5_type#' != '#' + 'logo5_type#') ? "#logo5_type#" : "png";
+            var srcImglogoM6 = ('#logo6#' != '#' + 'logo6#') ? "#logo6#" : mode6;
+            var srcImglogoM6_T = ('#logo6_type#' != '#' + 'logo6_type#') ? "#logo6_type#" : "png";
+            var srcImglogoM7 = ('#logo7#' != '#' + 'logo7#') ? "#logo7#" : mode7;
+            var srcImglogoM7_T = ('#logo7_type#' != '#' + 'logo7_type#') ? "#logo7_type#" : "png";
+            var srcImglogoM8 = ('#logo8#' != '#' + 'logo8#') ? "#logo8#" : mode8;
+            var srcImglogoM8_T = ('#logo8_type#' != '#' + 'logo8_type#') ? "#logo8_type#" : "png";
+            var srcImglogoM9 = ('#logo9#' != '#' + 'logo9#') ? "#logo9#" : mode9;
+            var srcImglogoM9_T = ('#logo9_type#' != '#' + 'logo9_type#') ? "#logo9_type#" : "png";
+            var srcImglogoM10 = ('#logo10#' != '#' + 'logo10#') ? "#logo10#" : mode10;
+            var srcImglogoM10_T = ('#logo10_type#' != '#' + 'logo10_type#') ? "#logo10_type#" : "png";
+
+            // Paramétrage des images
+            var srcFolder = ('#dossier#' != '#' + 'dossier#') ? "#dossier#" : "NULL";
+
+            if (srcFolder == 'NULL') {
+                var srcImgURL = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
+            } else {
+                var srcImgURL = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/" + srcFolder + '/';
+            };
             // Paramètre "sizeh" & "sizew"
-                var srcImgHeight_M          = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#'):40;
-                var srcImgWidth_M           = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#'):40;
-                // Type de taille
-                    var srcImgpourcent_M    = ('#Pourcentage-M#'!='#'+'Pourcentage-M#') ? "#Pourcentage-M#" : "NO";
-                    if (srcImgpourcent_M  == "NO") {
-                        var srcImgSize_M    = 'height='+srcImgHeight_M+'px width='+srcImgWidth_M+'px';
-                    } else if (srcImgpourcent_M  == "YES") {
-                        var srcImgSize_M    = 'height='+srcImgHeight_M+'% width='+srcImgWidth_M+'%';
-                    }
+            var srcImgHeight_M = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#') : 40;
+            var srcImgWidth_M = is_numeric('#sizew-M#') ? parseFloat('#sizew-M#') : 40;
+            // Type de taille
+            var srcImgpourcent_M = ('#Pourcentage-M#' != '#' + 'Pourcentage-M#') ? "#Pourcentage-M#" : "NO";
+            if (srcImgpourcent_M == "NO") {
+                var srcImgSize_M = 'height=' + srcImgHeight_M + 'px width=' + srcImgWidth_M + 'px';
+            } else if (srcImgpourcent_M == "YES") {
+                var srcImgSize_M = 'height=' + srcImgHeight_M + '% width=' + srcImgWidth_M + '%';
+            }
 
             // Paramètrage du logo pour Erreur
-                var srcImglogoER            = ('#logoER#'!='#'+'logoER#') ? "#logoER#": "er_oups6_or";
-                var srcImglogoER_T          = ('#logoER_type#'!='#'+'logoER_type#') ? "#logoER_type#": "png";
-                var srcFolderER             = ('#dossierER#'!='#'+'dossierER#') ? "#dossierER#" : "error";
-                var srcImgURL_ER            = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/"+srcFolderER+'/';
+            var srcImglogoER = ('#logoER#' != '#' + 'logoER#') ? "#logoER#" : "er_oups6_or";
+            var srcImglogoER_T = ('#logoER_type#' != '#' + 'logoER_type#') ? "#logoER_type#" : "png";
+            var srcFolderER = ('#dossierER#' != '#' + 'dossierER#') ? "#dossierER#" : "error";
+            var srcImgURL_ER = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/" + srcFolderER + '/';
 
             // Variable pour Update
-                var srcPictureID;
-          		var srcPictureID_T;
+            var srcPictureID;
+            var srcPictureID_T;
 
-        // Update IMG + gestion erreur
-           if (_options.display_value.indexOf(mode0) != -1) {
-                srcPictureID	= srcImglogoM0;
-                srcPictureID_T	= srcImglogoM0_T;
+            // Update IMG + gestion erreur
+            if (_options.display_value.indexOf(mode0) != -1) {
+                srcPictureID = srcImglogoM0;
+                srcPictureID_T = srcImglogoM0_T;
             } else if (_options.display_value.indexOf(mode1) != -1) {
-                srcPictureID	= srcImglogoM1;
-                srcPictureID_T	= srcImglogoM1_T;
+                srcPictureID = srcImglogoM1;
+                srcPictureID_T = srcImglogoM1_T;
             } else if (_options.display_value.indexOf(mode2) != -1) {
-                srcPictureID	= srcImglogoM2;
-                srcPictureID_T	= srcImglogoM2_T;
+                srcPictureID = srcImglogoM2;
+                srcPictureID_T = srcImglogoM2_T;
             } else if (_options.display_value.indexOf(mode3) != -1) {
-                srcPictureID	= srcImglogoM3;
-                srcPictureID_T	= srcImglogoM3_T;
+                srcPictureID = srcImglogoM3;
+                srcPictureID_T = srcImglogoM3_T;
             } else if (_options.display_value.indexOf(mode4) != -1) {
-                srcPictureID	= srcImglogoM4;
-                srcPictureID_T	= srcImglogoM4_T;
+                srcPictureID = srcImglogoM4;
+                srcPictureID_T = srcImglogoM4_T;
             } else if (_options.display_value.indexOf(mode5) != -1) {
-                srcPictureID	= srcImglogoM5;
-                srcPictureID_T	= srcImglogoM5_T;
-           } else if (_options.display_value.indexOf(mode6) != -1) {
-                srcPictureID	= srcImglogoM6;
-                srcPictureID_T	= srcImglogoM6_T;
+                srcPictureID = srcImglogoM5;
+                srcPictureID_T = srcImglogoM5_T;
+            } else if (_options.display_value.indexOf(mode6) != -1) {
+                srcPictureID = srcImglogoM6;
+                srcPictureID_T = srcImglogoM6_T;
             } else if (_options.display_value.indexOf(mode7) != -1) {
-                srcPictureID	= srcImglogoM7;
-                srcPictureID_T	= srcImglogoM7_T;
+                srcPictureID = srcImglogoM7;
+                srcPictureID_T = srcImglogoM7_T;
             } else if (_options.display_value.indexOf(mode8) != -1) {
-                srcPictureID	= srcImglogoM8;
-                srcPictureID_T	= srcImglogoM8_T;
+                srcPictureID = srcImglogoM8;
+                srcPictureID_T = srcImglogoM8_T;
             } else if (_options.display_value.indexOf(mode9) != -1) {
-                srcPictureID	= srcImglogoM9;
-                srcPictureID_T	= srcImglogoM9_T;
+                srcPictureID = srcImglogoM9;
+                srcPictureID_T = srcImglogoM9_T;
             } else if (_options.display_value.indexOf(mode10) != -1) {
-                srcPictureID	= srcImglogoM10;
-                srcPictureID_T	= srcImglogoM10_T;
+                srcPictureID = srcImglogoM10;
+                srcPictureID_T = srcImglogoM10_T;
             } else {
-                srcPictureID	= srcImglogoER;
-                srcPictureID_T	= srcImglogoER_T;
-                srcImgURL       = srcImgURL_ER;
+                srcPictureID = srcImglogoER;
+                srcPictureID_T = srcImglogoER_T;
+                srcImgURL = srcImgURL_ER;
             }
-          
-        $('.cmd[data-cmd_uid=#uid#] .iconCmd#id#').empty().append('<img src="'+srcImgURL +srcPictureID +'.'+ srcPictureID_T+'" '+srcImgSize_M+'>');
-        $('.cmd[data-cmd_uid=#uid#] .value#id#').empty().append(_options.display_value+' '+'#unite#');
-        $('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectée le '+_options.collectDate);
-          
+
+            $('.cmd[data-cmd_uid=#uid#] .iconCmd#id#').empty().append('<img src="' + srcImgURL + srcPictureID + '.' + srcPictureID_T + '" ' + srcImgSize_M + '>');
+            $('.cmd[data-cmd_uid=#uid#] .value#id#').empty().append(_options.display_value + ' ' + '#unite#');
+            $('.cmd[data-cmd_id=#id#]').attr('title', 'Valeur du ' + _options.valueDate + ', collectée le ' + _options.collectDate);
+
             // Affichage durée changement dernier etat
-                var srcImglogoTime_M	= '#logoTime#';
+            var srcImglogoTime_M = '#logoTime#';
             // Derniere durée changement dernier etat
-                //Merci @Salvialf pour le code
-                if (srcImglogoTime_M == "duree") {
-                    jeedom.cmd.displayDuration(_options.valueDate, $('.cmd[data-cmd_id=#id#] .timeCmd#id#'));
-                } else if (srcImglogoTime_M == "date") {
-                    var srcdate     = new Date(_options.valueDate);
-                    var srcformat   = $.datepicker.formatDate('D dd/mm', srcdate);
-                    var srctime     = "à "+srcdate.getHours()+":"+(srcdate.getMinutes()<10?'0':'')+srcdate.getMinutes();
-                    $('.cmd[data-cmd_id=#id#] .timeCmd#id#').empty().html(srcformat+'<br>'+srctime);
-                } else if (srcImglogoTime_M == "heure") {
-                    var srcdate     = new Date(_options.valueDate);
-                    var srctime     = "à "+srcdate.getHours()+":"+(srcdate.getMinutes()<10?'0':'')+srcdate.getMinutes()+":"+(srcdate.getSeconds()<10?'0':'')+srcdate.getSeconds()+"";
-                    $('.cmd[data-cmd_id=#id#] .timeCmd#id#').empty().html(srctime);
-                };
+            //Merci @Salvialf pour le code
+            if (srcImglogoTime_M == "duree") {
+                jeedom.cmd.displayDuration(_options.valueDate, $('.cmd[data-cmd_id=#id#] .timeCmd#id#'));
+            } else if (srcImglogoTime_M == "date") {
+                var srcdate = new Date(_options.valueDate);
+                var srcformat = $.datepicker.formatDate('D dd/mm', srcdate);
+                var srctime = "à " + srcdate.getHours() + ":" + (srcdate.getMinutes() < 10 ? '0' : '') + srcdate.getMinutes();
+                $('.cmd[data-cmd_id=#id#] .timeCmd#id#').empty().html(srcformat + '<br>' + srctime);
+            } else if (srcImglogoTime_M == "heure") {
+                var srcdate = new Date(_options.valueDate);
+                var srctime = "à " + srcdate.getHours() + ":" + (srcdate.getMinutes() < 10 ? '0' : '') + srcdate.getMinutes() + ":" + (srcdate.getSeconds() < 10 ? '0' : '') + srcdate.getSeconds() + "";
+                $('.cmd[data-cmd_id=#id#] .timeCmd#id#').empty().html(srctime);
+            };
         }
-        jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});
-	</script>
+        jeedom.cmd.update['#id#']({
+            display_value: '#state#',
+            valueDate: '#valueDate#',
+            collectDate: '#collectDate#',
+            alertLevel: '#alertLevel#'
+        });
+
+    </script>
 </div>
