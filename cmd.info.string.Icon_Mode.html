@@ -56,9 +56,9 @@
             var srcFolder = ('#dossier#' != '#' + 'dossier#') ? "#dossier#" : "NULL";
 
             if (srcFolder == 'NULL') {
-                var srcImgURL = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/";
+                var srcImgURL = "data/img/";
             } else {
-                var srcImgURL = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/" + srcFolder + '/';
+                var srcImgURL = "data/img/" + srcFolder + '/';
             };
             // Paramètre "sizeh" & "sizew"
             var srcImgHeight_M = is_numeric('#sizeh-M#') ? parseFloat('#sizeh-M#') : 40;
@@ -75,7 +75,7 @@
             var srcImglogoER = ('#logoER#' != '#' + 'logoER#') ? "#logoER#" : "er_oups6_or";
             var srcImglogoER_T = ('#logoER_type#' != '#' + 'logoER_type#') ? "#logoER_type#" : "png";
             var srcFolderER = ('#dossierER#' != '#' + 'dossierER#') ? "#dossierER#" : "error";
-            var srcImgURL_ER = "data/customTemplates/dashboard/cmd.action.other.Multi-action-Defaut/" + srcFolderER + '/';
+            var srcImgURL_ER = "data/img/" + srcFolderER + '/';
 
             // Variable pour Update
             var srcPictureID;
